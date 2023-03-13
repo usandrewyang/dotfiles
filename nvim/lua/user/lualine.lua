@@ -50,8 +50,9 @@ lualine.setup {
   sections = {
     lualine_a = { "mode" },
     lualine_b = { "branch" },
-    lualine_c = { diagnostics },
-    -- lualine_d = {require('auto-session-librry').current_session_name},
+    -- lualine_c = { diagnostics },
+    -- lualine_c = {require('auto-session-library').current_session_name, {"filename", path = 2}},
+    lualine_c = {{"filename", path = 2}},
     lualine_x = { diff, spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { "progress" },
