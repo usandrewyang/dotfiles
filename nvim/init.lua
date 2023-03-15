@@ -32,3 +32,4 @@ require "user.wilder"
 
 -- nvim-osc52
 require "user.nvim-osc52"
+require "user.diffview"
