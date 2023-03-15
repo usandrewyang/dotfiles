@@ -31,6 +31,8 @@ wk.register({
     k = { "<cmd>Telescope colorscheme<cr>", "colorscheme" },
     m = { "<cmd>Telescope vim_bookmarks all<cr>", "search bookmarks in project" },
     o = { "<cmd>call Outline()<cr>", "search symbols in file" },
+
+    -- y = { "require('osc52').copy_operator", "yank to clipboard"},
     -- leader p used for paste from system clipboard
     -- s = { "<cmd>Telescope coc workspace_symbols<cr>", "search symbols in project" },
 

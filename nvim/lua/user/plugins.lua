@@ -109,7 +109,9 @@ return packer.startup(function(use)
   use 'gelguy/wilder.nvim' -- 更加智能的命令窗口
   use 'romgrk/fzy-lua-native' -- wilder.nvim 的依赖
   use 'rmagatti/auto-session' -- 打开 vim 的时候，自动回复上一次打开的样子
-
+    
+  -- clipboard support
+  use {'ojroques/nvim-osc52'}
     -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

@@ -29,3 +29,6 @@ require "user.lsp"
 require "user.cscope"
 require "user.which-key"
 require "user.wilder"
+
+-- nvim-osc52
+require "user.nvim-osc52"

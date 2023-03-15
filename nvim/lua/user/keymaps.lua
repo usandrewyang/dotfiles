@@ -83,3 +83,7 @@ keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(v
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 
+-- osc52
+keymap('n', '<leader>y', require('osc52').copy_operator, {expr = true})
+keymap('n', '<leader>yy', '<leader>y_', {remap = true})
+keymap('v', '<leader>y', require('osc52').copy_visual)
