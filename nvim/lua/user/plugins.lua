@@ -90,6 +90,10 @@ return packer.startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+  use {
+        "tom-anders/telescope-vim-bookmarks.nvim", commit="92498cbf7c127dea37c3d27117b60dd7ab9baef4",
+        requires = { {'MattesGroeger/vim-bookmarks', tag="1.3.0"} }
+    }
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",

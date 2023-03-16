@@ -5,7 +5,11 @@ end
 
 comment.setup {
     mappings = {
-        basic = false,
+        basic = true,
         extra = false,
+    },
+    toggler = {
+        line = 'gcc',
+        block = 'gbc',
     },
 }
