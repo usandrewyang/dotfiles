@@ -12,25 +12,14 @@ wk.register({
   ["<leader>"] = {
     -- a = { "<cmd>Telescope coc code_actions<cr>", "search coc code action" },
     b = { "<cmd>Telescope buffers<cr>", "search buffers" },
-    -- c = {
-    --   name = "+coc",
-    --   a = { "<Plug>(coc-codelens-action)", "run the Code Lens action on the current line" },
-    --   c = { "<Plug>(coc-codeaction)", "applying codeAction to the current buffer" },
-    --   f = { "<Plug>(coc-fix-current)", "apply AutoFix to problem on the current line" },
-    --   x = { "<Plug>(coc-codeaction-selected)", "Applying codeAction to the selected region" },
-    -- },
-    -- d = { "<cmd>Telescope coc workspace_diagnostics<cr>", "show coc diagnostics" },
-    e = { "<cmd>Telescope bookmarks<cr>", "searcher browser bookmarks" },
     f = { "<cmd>Telescope find_files<cr>", "search files (include submodules)" },
     F = { "<cmd>Telescope git_files<cr>", "search files (exclude submodules)" },
     g = { "<cmd>Telescope live_grep<cr>", "live grep" },
     r = { "<cmd>Telescope oldfiles<cr>", "recent files" },
     G = { "<cmd>Telescope grep_string<cr>", "live grep cursor word" },
-    -- h = { "<cmd>Telescope help_tags<cr>", "search vim manual" },
-    j = { "<cmd>Telescope emoji<cr>", "search emoji" },
     k = { "<cmd>Telescope colorscheme<cr>", "colorscheme" },
     m = { "<cmd>Telescope vim_bookmarks all<cr>", "search bookmarks in project" },
-    o = { "<cmd>call Outline()<cr>", "search symbols in file" },
+    s = { "<cmd>Telescope lsp_workspace_symbols<cr>", "search symbols in workspace" },
 
     -- y = { "require('osc52').copy_operator", "yank to clipboard"},
     -- leader p used for paste from system clipboard
