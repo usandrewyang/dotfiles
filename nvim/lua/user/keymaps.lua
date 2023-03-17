@@ -81,12 +81,13 @@ keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(v
 -- keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
-keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+-- keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting{ async = true}<cr>", opts)
 
 -- osc52
 local status_ok, osc52 = pcall(require, "osc52")
 if status_ok then
-    keymap('n', '<leader>y', osc52.copy_operator, {expr = true})
-    keymap('n', '<leader>yy', '<leader>y_', {remap = true})
+    keymap('n', '<leader>y', osc52.copy_operator, { expr = true })
+    keymap('n', '<leader>yy', '<leader>y_', { remap = true })
     keymap('v', '<leader>y', osc52.copy_visual)
 end

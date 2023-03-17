@@ -1,13 +1,13 @@
 local status_ok, cscope_maps = pcall(require, "cscope_maps")
 if not status_ok then
-  return
+    return
 end
 
 cscope_maps.setup({
-  disable_maps = false, -- true disables my keymaps, only :Cscope will be loaded
-  cscope = {
-    db_file = "./cscope.out", -- location of cscope db file
-  },
+    disable_maps = false,     -- true disables my keymaps, only :Cscope will be loaded
+    cscope = {
+        db_file = "./cscope.out", -- location of cscope db file
+    },
 })
 -- Cscope
 -- Shorten function name
