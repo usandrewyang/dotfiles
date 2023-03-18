@@ -83,6 +83,7 @@ keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(v
 -- Lsp
 -- keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting{ async = true}<cr>", opts)
+-- keymap("n", "<leader>lg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", opts)
 
 -- osc52
 local status_ok, osc52 = pcall(require, "osc52")
