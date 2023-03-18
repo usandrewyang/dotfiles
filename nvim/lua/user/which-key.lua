@@ -20,7 +20,7 @@ wk.register({
         k = { "<cmd>Telescope colorscheme<cr>", "colorscheme" },
         m = { "<cmd>Telescope vim_bookmarks all<cr>", "search bookmarks in project" },
         s = { "<cmd>Telescope lsp_workspace_symbols<cr>", "search symbols in workspace" },
-
+        e = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "ripgrep with args"},
         -- y = { "require('osc52').copy_operator", "yank to clipboard"},
         -- leader p used for paste from system clipboard
         -- s = { "<cmd>Telescope coc workspace_symbols<cr>", "search symbols in project" },
