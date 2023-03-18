@@ -1,9 +1,16 @@
-# Nvim configure
+Collection of dotfiles
+======================
+A constantly evolving set of configurations of tools which I use on daily basis. I spend so much time tweaking. 
 
+nvim
+----
 
-## Usage
-1 - git clone this_repo path_to_repo
-2 - ln -s path_to_repo/nvim ~/.config/nvim
-3 - start nvim
+bash
+----
 
+tmux
+----
+
+fzf
+---
 
