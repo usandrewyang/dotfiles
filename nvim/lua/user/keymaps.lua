@@ -91,3 +91,7 @@ if status_ok then
     keymap('n', '<leader>yy', '<leader>y_', { remap = true })
     keymap('v', '<leader>y', osc52.copy_visual)
 end
+
+-- Quickfix window
+keymap("n", "[q", "<cmd>cNext<cr>", opts)
+keymap("n", "]q", "<cmd>cnext<cr>", opts)
