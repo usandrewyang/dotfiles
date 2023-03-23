@@ -95,3 +95,5 @@ end
 -- Quickfix window
 keymap("n", "[q", "<cmd>cNext<cr>", opts)
 keymap("n", "]q", "<cmd>cnext<cr>", opts)
+
+keymap("n", "<F2>", "<cmd>SymbolsOutline<cr>", opts)
