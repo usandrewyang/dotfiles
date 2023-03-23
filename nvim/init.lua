@@ -8,6 +8,7 @@ require "user.cmp"
 require "user.telescope"
 require "user.gitsigns"
 require "user.treesitter"
+require "user.treesitter-context"
 require "user.autopairs"
 require "user.comment"
 require "user.nvim-tree"
@@ -33,3 +34,5 @@ require "user.wilder"
 -- nvim-osc52
 require "user.nvim-osc52"
 require "user.diffview"
+
+require "user.close-buffers"
