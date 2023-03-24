@@ -37,7 +37,7 @@ wk.register({
         ["9"] = { "<cmd>BufferLineGoToBuffer 9<cr>", "jump to buffer 9" },
         ["0"] = { "<cmd>BufferLineGoToBuffer 10<cr>", "jump to buffer 10" },
 
-        c = { "<cmd>Bdelete hidden<cr>", "close invisible buffers" },
+        c = { "<cmd>BDelete hidden<cr>", "close invisible buffers" },
         x = { "<cmd>Bdelete %<cr>", "close current buffer" },
     },
     -- " 使用 space [number] 切换到第 [number] 个 window
