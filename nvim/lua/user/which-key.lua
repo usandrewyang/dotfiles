@@ -37,8 +37,13 @@ wk.register({
         ["9"] = { "<cmd>BufferLineGoToBuffer 9<cr>", "jump to buffer 9" },
         ["0"] = { "<cmd>BufferLineGoToBuffer 10<cr>", "jump to buffer 10" },
 
-        c = { "<cmd>Bdelete hidden<cr>", "close invisible buffers" },
+        c = { "<cmd>BDelete hidden<cr>", "close invisible buffers" },
         x = { "<cmd>Bdelete %<cr>", "close current buffer" },
+        d = {
+            name = "BDelete shortcuts",
+            h = {"<CMD>lua require('close_buffers').delete({type = 'hidden'})<CR>", "close hidden buffers"},
+            c = {"<CMD>lua require('close_buffers').delete({type = 'this'})<CR>", "close current buffers"},
+        },
     },
     -- " 使用 space [number] 切换到第 [number] 个 window
     -- ['<space>'] = {
