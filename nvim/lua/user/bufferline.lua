@@ -12,6 +12,10 @@ bufferline.setup {
         right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
         separator_style = "thin",        -- | "thick" | "thin" | { 'any', 'any' },
+        indicator = {
+            icon = '▎', -- this should be omitted if indicator style is not 'icon'
+            style = "icon"-- 'icon' | 'underline' | 'none',
+        },
     },
 
     highlights = {
