@@ -51,7 +51,7 @@ function _omb_alias_general_mkdir_init {
 alias cp='_omb_alias_general_cp_init'       # Preferred 'cp' implementation
 alias mv='_omb_alias_general_mv_init'       # Preferred 'mv' implementation
 alias mkdir='_omb_alias_general_mkdir_init' # Preferred 'mkdir' implementation
-alias ll='ls -lAFh'                         # Preferred 'ls' implementation
+# alias ll='ls -lAFh'                         # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias nano='nano -W'                        # Preferred 'nano' implementation
 alias wget='wget -c'                        # Preferred 'wget' implementation (resume download)
@@ -62,3 +62,23 @@ alias fix_stty='stty sane'                  # fix_stty:     Restore terminal set
 alias fix_term='echo -e "\033c"'            # fix_term:     Reset the conosle.  Similar to the reset command
 alias cic='bind "set completion-ignore-case on"' # cic:          Make tab-completion case-insensitive
 alias src='source ~/.bashrc'                # src:          Reload .bashrc file
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+alias ls='ls --color=auto'
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
