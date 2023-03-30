@@ -36,4 +36,5 @@ require "user.nvim-osc52"
 require "user.diffview"
 
 require "user.close-buffers"
+require "user.git"
 require "user.symbols-outline"

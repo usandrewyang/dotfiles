@@ -123,6 +123,9 @@ return packer.startup(function(use)
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use {'kazhala/close-buffers.nvim'}
     use {'simrat39/symbols-outline.nvim'}
+    use {
+          'dinhhuy258/git.nvim'
+    }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
