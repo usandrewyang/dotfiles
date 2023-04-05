@@ -38,3 +38,5 @@ require "user.diffview"
 require "user.close-buffers"
 require "user.git"
 require "user.symbols-outline"
+
+require "move"
