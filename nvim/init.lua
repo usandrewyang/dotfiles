@@ -39,4 +39,4 @@ require "user.close-buffers"
 require "user.git"
 require "user.symbols-outline"
 
-require "move"
+require "move" -- A moving lines plugin. No setup is required.
