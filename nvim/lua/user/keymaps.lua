@@ -81,7 +81,8 @@ keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(v
 -- keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
-keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+keymap({"n", "v"}, "<leader>lf", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", opts)
+-- keymap('v', '<leader>lf', '<ESC><cmd>lua vim.lsp.buf.range_formatting()<CR>', {noremap = true})
 -- keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting{ async = true}<cr>", opts)
 
 -- osc52
