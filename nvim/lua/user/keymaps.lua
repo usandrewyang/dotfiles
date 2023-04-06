@@ -110,3 +110,7 @@ vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
 vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
 vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
 vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
+
+-- Switch the current buff and previous one
+vim.keymap.set('n', '<C-b>', '<C-^>', opts)
+vim.keymap.set('i', '<C-b>', '<ESC><C-^>', opts)
