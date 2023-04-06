@@ -29,8 +29,10 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<Tab>", ":bnext<CR>", opts)
-keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
+-- Since <Tab> is the same as <C-i>, <C-i>jumplist will 
+-- stop working if map it.
+keymap("n", "<S-Tab>", ":bnext<CR>", opts)
+-- keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
@@ -111,3 +113,7 @@ vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
 vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
 vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
 vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
+
+-- Switch the current buff and previous one
+vim.keymap.set('n', '<C-b>', '<C-^>', opts)
+vim.keymap.set('i', '<C-b>', '<ESC><C-^>', opts)
