@@ -127,6 +127,10 @@ return packer.startup(function(use)
           'dinhhuy258/git.nvim'
     }
     use {'fedepujol/move.nvim'}
+    use({
+        'kylechui/nvim-surround',
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    })
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

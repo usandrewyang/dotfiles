@@ -40,3 +40,4 @@ require "user.git"
 require "user.symbols-outline"
 
 require "move" -- A moving lines plugin. No setup is required
+require "user.surround"
