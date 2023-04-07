@@ -46,7 +46,7 @@ return packer.startup(function(use)
     -- My plugins here
     use { "wbthomason/packer.nvim" } -- Have packer manage itself
     use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" }  -- Useful lua functions used by lots of plugins
-    use { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" }  -- Autopairs, integrates with both cmp and treesitter
+    use { "windwp/nvim-autopairs", }  -- Autopairs, integrates with both cmp and treesitter
     use { "numToStr/Comment.nvim", tag = "v0.7.0" }
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "32d9627123321db65a4f158b72b757bcaef1a3f4" }
     use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
@@ -127,6 +127,10 @@ return packer.startup(function(use)
           'dinhhuy258/git.nvim'
     }
     use {'fedepujol/move.nvim'}
+    use({
+        'kylechui/nvim-surround',
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    })
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
