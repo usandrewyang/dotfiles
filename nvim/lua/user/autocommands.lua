@@ -55,3 +55,9 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 -- Go to the line when the file was closed last time
 vim.api.nvim_create_autocmd("BufReadPost",
     { command = [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif]] })
+
+-- Remove the tailing whitespaces
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
