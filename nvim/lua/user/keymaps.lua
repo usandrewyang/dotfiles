@@ -29,7 +29,7 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
--- Since <Tab> is the same as <C-i>, <C-i>jumplist will 
+-- Since <Tab> is the same as <C-i>, <C-i>jumplist will
 -- stop working if map it.
 keymap("n", "<S-Tab>", ":bnext<CR>", opts)
 -- keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
@@ -117,3 +117,6 @@ vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
 -- Switch the current buff and previous one
 vim.keymap.set('n', '<C-b>', '<C-^>', opts)
 vim.keymap.set('i', '<C-b>', '<ESC><C-^>', opts)
+
+-- Shortcut for replace current word in the current buffer
+vim.keymap.set('n', '<F3>', ':%s/<C-r><C-w>/<C-r><C-w>/c', {})
