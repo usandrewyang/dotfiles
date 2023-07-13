@@ -50,7 +50,8 @@ return packer.startup(function(use)
     use { "numToStr/Comment.nvim", tag = "v0.7.0" }
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "32d9627123321db65a4f158b72b757bcaef1a3f4" }
     use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
-    use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
+    -- use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
+    use { "kyazdani42/nvim-tree.lua" }
     use { "akinsho/bufferline.nvim", tag = "v3.5.0" }
     use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
     use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
@@ -95,9 +96,11 @@ return packer.startup(function(use)
         requires = { { 'MattesGroeger/vim-bookmarks', tag = "1.3.0" } }
     }
     -- Treesitter
+    -- use {
+    --     "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+    -- }
     use {
         "nvim-treesitter/nvim-treesitter",
-        commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
     }
     use {'nvim-treesitter/nvim-treesitter-context'}
     -- Git
