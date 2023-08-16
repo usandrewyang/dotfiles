@@ -134,7 +134,7 @@ return packer.startup(function(use)
         'kylechui/nvim-surround',
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     })
-    ---- highlight active window
+    -- highlight active window
     use {
         "levouh/tint.nvim",
         config = function ()
