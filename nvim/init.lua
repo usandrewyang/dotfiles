@@ -8,7 +8,7 @@ require "user.cmp"
 require "user.telescope"
 require "user.gitsigns"
 require "user.treesitter"
-require "user.treesitter-context"
+-- require "user.treesitter-context"
 require "user.autopairs"
 require "user.comment"
 require "user.nvim-tree"
@@ -37,7 +37,7 @@ require "user.diffview"
 
 require "user.close-buffers"
 require "user.git"
-require "user.symbols-outline"
+-- require "user.symbols-outline"
 
 require "move" -- A moving lines plugin. No setup is required
 require "user.surround"

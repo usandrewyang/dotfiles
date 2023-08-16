@@ -49,10 +49,10 @@ return packer.startup(function(use)
     use { "windwp/nvim-autopairs", }  -- Autopairs, integrates with both cmp and treesitter
     use { "numToStr/Comment.nvim", tag = "v0.7.0" }
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "32d9627123321db65a4f158b72b757bcaef1a3f4" }
-    use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
+    use { "nvim-tree/nvim-web-devicons" }
     use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
     -- use { "kyazdani42/nvim-tree.lua" }
-    use { "akinsho/bufferline.nvim", tag = "v3.5.0" }
+    use { "akinsho/bufferline.nvim", tag = "v4.3.0" }
     use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
     use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
     use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" }
@@ -102,7 +102,7 @@ return packer.startup(function(use)
     use {
         "nvim-treesitter/nvim-treesitter", tag = "v0.9.0"
     }
-    use {'nvim-treesitter/nvim-treesitter-context'}
+    -- use {'nvim-treesitter/nvim-treesitter-context'}
     -- Git
     use { "lewis6991/gitsigns.nvim", tag = "v0.6" }
 
@@ -134,7 +134,7 @@ return packer.startup(function(use)
         'kylechui/nvim-surround',
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     })
-    -- highlight active window
+    ---- highlight active window
     use {
         "levouh/tint.nvim",
         config = function ()
@@ -147,9 +147,9 @@ return packer.startup(function(use)
       tag = "*",
       requires = {
         "SmiteshP/nvim-navic",
-        -- "nvim-tree/nvim-web-devicons", -- optional dependency
+        "nvim-tree/nvim-web-devicons", -- optional dependency
       },
-      -- after = "nvim-web-devicons", -- keep this if you're using NvChad
+      after = "nvim-web-devicons", -- keep this if you're using NvChad
       config = function()
         require("barbecue").setup({
             })
