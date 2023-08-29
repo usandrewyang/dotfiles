@@ -43,3 +43,5 @@ require "move" -- A moving lines plugin. No setup is required
 require "user.surround"
 require "user.su"
 
+require "user.barbecue"
+

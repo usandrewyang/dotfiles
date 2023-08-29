@@ -144,16 +144,17 @@ return packer.startup(function(use)
 
     use({
         "utilyre/barbecue.nvim",
-        tag = "*",
+        -- tag = "*",
+        tag = "v1.2.0",
         requires = {
             "SmiteshP/nvim-navic",
             "nvim-tree/nvim-web-devicons", -- optional dependency
         },
-        after = "nvim-web-devicons",   -- keep this if you're using NvChad
-        config = function()
-            require("barbecue").setup({
-            })
-        end,
+        -- after = "nvim-web-devicons",   -- keep this if you're using NvChad
+        -- config = function()
+        --     require("barbecue").setup({
+        --     })
+        -- end,
     })
     -- use {'s1n7ax/nvim-search-and-replace'}
     -- Automatically set up your configuration after cloning packer.nvim
