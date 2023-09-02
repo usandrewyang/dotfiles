@@ -1,6 +1,14 @@
 " Don't try to be vi compatible
 set nocompatible
 
+"
+" Bootstrap for plugin manager
+" automatically install Vundle if vim-plug not found
+"
+if empty(glob('~/.vim/bundle/Vundle.vim'))
+  silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle plugin manager
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -128,7 +136,9 @@ set t_Co=256
 set background=dark
 
 " TODO:tokoyo moonlight does not work!
-set termguicolors
+if has('termguicolors')
+  set termguicolors
+endif
 "let g:tokyonight_style = 'night' " available: night, storm
 "let g:tokyonight_enable_italic = 1
 "
