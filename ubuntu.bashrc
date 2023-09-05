@@ -116,26 +116,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 # set readline editting mode as vi
 set -o vi
 # Turn off the bell of the command
 bind 'set bell-style none'
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/home/andrew/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/home/andrew/miniconda3/etc/profile.d/conda.sh" ]; then
-#        . "/home/andrew/miniconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/home/andrew/miniconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda initialize <<<
-
-#conda activate yabgp
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
