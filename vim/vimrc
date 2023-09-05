@@ -24,8 +24,11 @@ set number
 " Show file stats
 set ruler
 
-" Blink cursor on error instead of beeping (grr)
-set visualbell
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 " Encoding
 set encoding=utf-8
@@ -91,10 +94,23 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color scheme (terminal)
+" TODO tokoyo moonlight
 set t_Co=256
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-" put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-" in ~/.vim/colors/ and uncomment:
-" colorscheme solarized
+
+" Delete trailing white space on save, useful for some filetypes ;)
+fun! CleanExtraSpaces()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
+
+if has("autocmd")
+    autocmd BufWritePre *.txt,*.py,*.sh,*.c,*h,*.cpp :call CleanExtraSpaces()
+endif
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
