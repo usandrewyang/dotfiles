@@ -22,7 +22,6 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 
 lazy.setup({
     -- My plugins here
-    "wbthomason/packer.nvim", -- Have packer manage itself
     { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" },  -- Useful lua functions used by lots of plugins
     { "windwp/nvim-autopairs", },  -- Autopairs, integrates with both cmp and treesitter
     { "numToStr/Comment.nvim", tag = "v0.7.0" },
