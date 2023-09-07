@@ -70,14 +70,11 @@ lazy.setup({
 
     {
         "tom-anders/telescope-vim-bookmarks.nvim", commit = "92498cbf7c127dea37c3d27117b60dd7ab9baef4",
-        dependencies = { { 'MattesGroeger/vim-bookmarks', tag = "1.3.0" } }
+        dependencies = { { "MattesGroeger/vim-bookmarks", tag = "1.3.0" } }
     },
     -- Treesitter
-    -- use {
-    --     "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
-    -- }
     { "nvim-treesitter/nvim-treesitter", tag = "v0.9.0" },
-    -- use {'nvim-treesitter/nvim-treesitter-context'}
+
     -- Git
     { "lewis6991/gitsigns.nvim", tag = "v0.6" },
 
@@ -95,16 +92,18 @@ lazy.setup({
     "romgrk/fzy-lua-native", -- wilder.nvim 的依赖
     "rmagatti/auto-session", -- 打开 vim 的时候，自动回复上一次打开的样子
     -- clipboard support
-    { 'ojroques/nvim-osc52' },
+    { "ojroques/nvim-osc52" },
 
     -- better diff
-    { 'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim' },
-    {'kazhala/close-buffers.nvim'},
-    {'simrat39/symbols-outline.nvim'},
-    { 'dinhhuy258/git.nvim' },
-    {'fedepujol/move.nvim'},
-    { 'kylechui/nvim-surround' },-- Use for stability; omit to use `main` branch for the latest features
-    --
+    { "sindrets/diffview.nvim", dependencies = "nvim-lua/plenary.nvim" },
+
+    {"kazhala/close-buffers.nvim"},
+    {"simrat39/symbols-outline.nvim"},
+    { "dinhhuy258/git.nvim" },
+
+    {"fedepujol/move.nvim"},
+    { "kylechui/nvim-surround", tag = "v2.1.1" },-- Use for stability; omit to use `main` branch for the latest features
+
     -- highlight active window
     {
         "levouh/tint.nvim",
@@ -115,7 +114,6 @@ lazy.setup({
 
     {
         "utilyre/barbecue.nvim",
-        -- tag = "*",
         tag = "v1.2.0",
         dependencies = {
             "SmiteshP/nvim-navic",
