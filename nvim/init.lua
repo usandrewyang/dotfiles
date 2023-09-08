@@ -15,10 +15,6 @@ require "user.bufferline"
 require "user.auto-session" -- Save all open buffers as a session
 require "user.lualine"
 
--- The following plugin will mess up the current working directory
--- which will cause cscope stops working.
--- require "user.project"
-
 require "user.illuminate"
 require "user.indentline"
 require "user.alpha"
