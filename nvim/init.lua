@@ -32,11 +32,11 @@ require "user.wilder"
 
 -- nvim-osc52
 require "user.nvim-osc52"
-require "user.diffview"
+
+-- require "user.diffview"
 
 require "user.close-buffers"
-require "user.git"
--- require "user.symbols-outline"
+-- require "user.git"
 
 require "move" -- A moving lines plugin. No setup is required
 require "user.surround"

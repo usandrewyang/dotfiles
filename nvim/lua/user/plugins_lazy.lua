@@ -10,6 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 local status_ok, lazy = pcall(require, "lazy")
@@ -28,7 +29,7 @@ lazy.setup({
     { "JoosepAlviste/nvim-ts-context-commentstring", commit = "32d9627123321db65a4f158b72b757bcaef1a3f4" },
     { "nvim-tree/nvim-web-devicons" },
     { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" },
-    -- use { "kyazdani42/nvim-tree.lua" }
+
     { "akinsho/bufferline.nvim", tag = "v4.3.0" },
     { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" },
     { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" },
@@ -61,16 +62,15 @@ lazy.setup({
     { "williamboman/mason-lspconfig.nvim", commit = "0eb7cfefbd3a87308c1875c05c3f3abac22d367c" },
     { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" }, -- for formatters and linters
     { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" },
-        -- Telescope
-    {
-        "nvim-telescope/telescope.nvim", tag = "0.1.1",
-        dependencies = { { 'nvim-lua/plenary.nvim' } }
-    },
+
+    -- Telescope
+    { "nvim-telescope/telescope.nvim", tag = "0.1.1", dependencies = { "nvim-lua/plenary.nvim" } },
 
     {
         "tom-anders/telescope-vim-bookmarks.nvim", commit = "92498cbf7c127dea37c3d27117b60dd7ab9baef4",
         dependencies = { { "MattesGroeger/vim-bookmarks", tag = "1.3.0" } }
     },
+
     -- Treesitter
     { "nvim-treesitter/nvim-treesitter", tag = "v0.9.0" },
 
@@ -90,15 +90,16 @@ lazy.setup({
     "gelguy/wilder.nvim",    -- 更加智能的命令窗口
     "romgrk/fzy-lua-native", -- wilder.nvim 的依赖
     "rmagatti/auto-session", -- 打开 vim 的时候，自动回复上一次打开的样子
+
     -- clipboard support
     { "ojroques/nvim-osc52" },
 
     -- better diff
-    { "sindrets/diffview.nvim", dependencies = "nvim-lua/plenary.nvim" },
+    -- { "sindrets/diffview.nvim", dependencies = "nvim-lua/plenary.nvim" },
 
     {"kazhala/close-buffers.nvim"},
     {"simrat39/symbols-outline.nvim"},
-    { "dinhhuy258/git.nvim" },
+    -- { "dinhhuy258/git.nvim" },
 
     {"fedepujol/move.nvim"},
     { "kylechui/nvim-surround", tag = "v2.1.1" },-- Use for stability; omit to use `main` branch for the latest features
