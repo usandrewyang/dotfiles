@@ -1,11 +1,20 @@
 " Don't try to be vi compatible
 set nocompatible
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle plugin manager
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set the runtime path to include Vundle and initialize
+"
+" TODO: Vundle won't bootstrap itself. It is required to download it first
+"
+"
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"
+"
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
-" TODO: Load plugins here (pathogen or vundle)
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -21,7 +30,10 @@ Plugin 'tpope/vim-fugitive'
 
 " tokoyo colorscheme
 "
-Plugin 'ghifarit53/tokyonight-vim'
+"Plugin 'ghifarit53/tokyonight-vim'
+Plugin 'morhetz/gruvbox'
+
+"Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()            " required
 
@@ -30,6 +42,10 @@ syntax on
 
 " For plugins to load correctly
 filetype plugin indent on
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" End of Vundle plugin manager
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " TODO: Pick a leader key
 let mapleader = " "
@@ -111,11 +127,13 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 set t_Co=256
 set background=dark
 
-" tokoyo moonlight
+" TODO:tokoyo moonlight does not work!
 set termguicolors
-let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 1
-colorscheme tokyonight
+"let g:tokyonight_style = 'night' " available: night, storm
+"let g:tokyonight_enable_italic = 1
+"
+colorscheme gruvbox "tokyonight
+"colorscheme desert
 
 
 " Delete trailing white space on save, useful for some filetypes ;)
