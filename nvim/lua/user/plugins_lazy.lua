@@ -52,7 +52,7 @@ lazy.setup({
     { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" },
 
     -- snippets
-    { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" },             --snippet engine
+    { "L3MON4D3/LuaSnip", version = "2.*"},             --snippet engine
     { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" }, -- a bunch of snippets to use
 
     -- LSP
@@ -91,6 +91,7 @@ lazy.setup({
 
     -- Cscope
     "dhananjaylatkar/cscope_maps.nvim",
+
     -- -- Which key
     "folke/which-key.nvim",
 
@@ -106,7 +107,6 @@ lazy.setup({
 
     {"kazhala/close-buffers.nvim"},
     {"simrat39/symbols-outline.nvim"},
-    -- { "dinhhuy258/git.nvim" },
 
     {"fedepujol/move.nvim"},
     { "kylechui/nvim-surround", tag = "v2.1.1" },-- Use for stability; omit to use `main` branch for the latest features
