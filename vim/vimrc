@@ -5,6 +5,25 @@ set nocompatible
 filetype off
 
 " TODO: Load plugins here (pathogen or vundle)
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
+" tokoyo colorscheme
+"
+Plugin 'ghifarit53/tokyonight-vim'
+
+call vundle#end()            " required
 
 " Turn on syntax highlighting
 syntax on
@@ -89,9 +108,15 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color scheme (terminal)
-" TODO tokoyo moonlight
 set t_Co=256
 set background=dark
+
+" tokoyo moonlight
+set termguicolors
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
+
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
