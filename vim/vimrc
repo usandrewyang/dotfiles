@@ -47,8 +47,9 @@ filetype plugin indent on
 " End of Vundle plugin manager
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" TODO: Pick a leader key
+" Pick a leader key
 let mapleader = " "
+set timeoutlen=2000 ttimeoutlen=0
 
 " Security
 set modelines=0
@@ -102,8 +103,8 @@ set showmode
 set showcmd
 
 " Searching
-nnoremap / /\v
-vnoremap / /\v
+"nnoremap / /\v
+"vnoremap / /\v
 set hlsearch
 set incsearch
 set ignorecase
@@ -118,9 +119,8 @@ map <leader>q gqip
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
-" Uncomment this to enable by default:
-" set list " To enable by default
-" Or use your leader key + l to toggle on/off
+" Uncomment this to enable by default: set list " To enable by default Or use
+" your leader key + l to toggle on/off
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color scheme (terminal)
@@ -156,9 +156,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " cscope setup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("cscope")
-
-    """"""""""""" Standard cscope/vim boilerplate
-
     " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
     set cscopetag
 
@@ -197,14 +194,20 @@ if has("cscope")
     " show msg when any other cscope db added
     set cscopeverbose
 
-
-    """"""""""""" My cscope/vim key mappings
-    nmap gf :cs find f
-    nmap gd :cs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap gs :cs find s <C-R>=expand("<cword>")<CR><CR>
+    " set minimal key maps
+    nmap <leader>cf :cs find f 
+    nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
 
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " End of cscope setup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Highligth the current line 
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=Black ctermbg=Black
