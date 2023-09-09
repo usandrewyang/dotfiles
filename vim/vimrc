@@ -146,9 +146,65 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-    autocmd BufWritePre *.txt,*.py,*.sh,*.c,*h,*.cpp :call CleanExtraSpaces()
+    autocmd BufWritePre *.txt,*.py,*.sh,*.c,*h,*.cpp, :call CleanExtraSpaces()
 endif
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cscope setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("cscope")
+
+    """"""""""""" Standard cscope/vim boilerplate
+
+    " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
+    set cscopetag
+
+    " check cscope for definition of a symbol before checking ctags: set to 1
+    " if you want the reverse search order.
+    set csto=0
+
+    " hide msg when adding cscope database at start
+    set nocscopeverbose
+
+    " Find and add a cscope file. Either from CSCOPE_DB or by searching for it
+    " recursively starting in the CWD and going up to /
+    if $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    else
+        " Get all parts of our current path
+        let dirs = split($PWD, '/')
+        " Start building a list of paths in which to look for cscope.out
+        let paths = ['/']
+        " /foo/bar/baz would result in the `paths` array containing:
+        " [/ /foo /foo/bar /foo/bar/baz]
+        for d in dirs
+            let paths = add(paths, paths[len(paths) - 1] . d . '/')
+        endfor
+
+        " List is backwards search order, so reverse it.
+        for d in reverse(paths)
+            let cscope_file = d . "cscope.out"
+            if filereadable(cscope_file)
+                execute('cs add ' . cscope_file)
+                break
+            endif
+        endfor
+    endif
+
+    " show msg when any other cscope db added
+    set cscopeverbose
+
+
+    """"""""""""" My cscope/vim key mappings
+    nmap gf :cs find f
+    nmap gd :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap gs :cs find s <C-R>=expand("<cword>")<CR><CR>
+
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" End of cscope setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
