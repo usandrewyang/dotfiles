@@ -35,6 +35,8 @@ Plugin 'morhetz/gruvbox'
 
 "Plugin 'sheerun/vim-polyglot'
 
+Plugin 'ctrlpvim/ctrlp.vim'
+
 call vundle#end()            " required
 
 " Turn on syntax highlighting
@@ -213,3 +215,9 @@ highlight CursorLine guibg=Black ctermbg=Black
 " Key maps for edit .vimrc
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"
+" ctrlp configure
+"
+" Ignore files in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
