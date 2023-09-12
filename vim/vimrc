@@ -19,6 +19,7 @@
 " Don't try to be vi compatible
 set nocompatible
 
+set noswapfile
 "
 " Bootstrap for plugin manager
 " automatically install Vundle if vim-plug not found
@@ -244,9 +245,9 @@ highlight CursorLine guibg=Black ctermbg=Black
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-"map <leader>y "+y
-"map <leader>p "+p
-"map <leader>d "+d
+map <leader>x :bd <CR>
+map <F9> :bprev <CR>
+map <F10> :bnext <CR>
 
 "
 " ctrlp configure
