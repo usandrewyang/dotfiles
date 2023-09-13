@@ -55,9 +55,8 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 
-" tokoyo colorscheme
-"
-"Plugin 'ghifarit53/tokyonight-vim'
+" colorscheme
+Plugin 'ghifarit53/tokyonight-vim'
 Plugin 'morhetz/gruvbox'
 
 "Plugin 'sheerun/vim-polyglot'
@@ -158,11 +157,11 @@ set background=dark
 if has('termguicolors')
   set termguicolors
 endif
-"let g:tokyonight_style = 'night' " available: night, storm
-"let g:tokyonight_enable_italic = 1
 "
-colorscheme gruvbox "tokyonight
-"colorscheme desert
+"colorscheme gruvbox 
+colorscheme tokyonight
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
 
 
 " Delete trailing white space on save, useful for some filetypes ;)
@@ -224,7 +223,7 @@ if has("cscope")
     set cscopeverbose
 
     " set minimal key maps
-    nmap <leader>cf :cs find f 
+    nmap <leader>cf :cs find f<space>
     nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
     nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
 
@@ -249,8 +248,16 @@ map <leader>x :bd <CR>
 map <F9> :bprev <CR>
 map <F10> :bnext <CR>
 
+" yank to / paste from system clipboard
+map <leader>y "+y
+map <leader>yy "+yy
+map <leader>p "+p
+
 "
 " ctrlp configure
 "
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" TODO cannot find some file in sdk, e.g.systems/linux/user/common/socdiag.c
+let g:ctrlp_max_files = 0
+let g:ctrlp_user_command = 'find %s -type f'
