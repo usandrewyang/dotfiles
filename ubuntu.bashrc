@@ -122,3 +122,7 @@ set -o vi
 # Turn off the bell of the command
 bind 'set bell-style none'
 
+alias vim='TERM=xterm vim'
+alias nvim='TERM=screen nvim'
+
+export EDITOR=vim
