@@ -20,6 +20,9 @@
 set nocompatible
 
 set noswapfile
+
+set pastetoggle=<F3>
+
 "
 " Bootstrap for plugin manager
 " automatically install Vundle if vim-plug not found
@@ -76,8 +79,8 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Pick a leader key
-let mapleader = " "
-set timeoutlen=2000 ttimeoutlen=0
+let mapleader = "\<space>"
+set notimeout ttimeout
 
 " Security
 set modelines=0
@@ -241,8 +244,8 @@ autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=Black ctermbg=Black
 
 " Key maps for edit .vimrc
-nnoremap <leader>ev :e $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ve :e $MYVIMRC<cr>
+nnoremap <leader>vs :source $MYVIMRC<cr>
 
 map <leader>x :bd <CR>
 map <F9> :bprev <CR>
@@ -252,6 +255,8 @@ map <F10> :bnext <CR>
 map <leader>y "+y
 map <leader>yy "+yy
 map <leader>p "+p
+
+inoremap ;; <ESC>A;<ESC>
 
 "
 " ctrlp configure
