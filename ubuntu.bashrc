@@ -126,3 +126,4 @@ alias vim='TERM=xterm vim'
 alias nvim='TERM=screen nvim'
 
 export EDITOR=vim
+. /usr/share/autojump/autojump.sh
