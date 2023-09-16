@@ -122,8 +122,8 @@ set -o vi
 # Turn off the bell of the command
 bind 'set bell-style none'
 
-alias vim='TERM=xterm vim'
-alias nvim='TERM=screen nvim'
+alias v='TERM=xterm vim'
+alias vv='TERM=screen nvim'
 
 export EDITOR=vim
 . /usr/share/autojump/autojump.sh
