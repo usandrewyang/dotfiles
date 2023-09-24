@@ -23,6 +23,7 @@ set noswapfile
 
 set pastetoggle=<F3>
 
+set mouse=a
 "
 " Bootstrap for plugin manager
 " automatically install Vundle if vim-plug not found
@@ -65,6 +66,8 @@ Plugin 'morhetz/gruvbox'
 "Plugin 'sheerun/vim-polyglot'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'ojroques/vim-oscyank'
 
 call vundle#end()            " required
 
@@ -252,9 +255,13 @@ map <F9> :bprev <CR>
 map <F10> :bnext <CR>
 
 " yank to / paste from system clipboard
-map <leader>y "+y
-map <leader>yy "+yy
-map <leader>p "+p
+"map <leader>y "+y
+"map <leader>yy "+yy
+"map <leader>p "+p
+
+nmap <leader>y <Plug>OSCYankOperator
+nmap <leader>yy <leader>y_
+vmap <leader>y <Plug>OSCYankVisual
 
 inoremap ;; <ESC>A;<ESC>
 
