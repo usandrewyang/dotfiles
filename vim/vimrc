@@ -229,7 +229,7 @@ if has("cscope")
     set cscopeverbose
 
     " set minimal key maps
-    nmap <leader>cf :cs find f<space>
+    "nmap <leader>cf :cs find f<space>
     nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
     nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
 
@@ -262,6 +262,20 @@ map <F10> :bnext <CR>
 nmap <leader>y <Plug>OSCYankOperator
 nmap <leader>yy <leader>y_
 vmap <leader>y <Plug>OSCYankVisual
+
+" TODO register +/* does not work
+
+"" relative path (src/foo.txt)
+"nnoremap <leader>cf :let @+=expand("%")<CR>
+"
+"" absolute path (/something/src/foo.txt)
+"nnoremap <leader>cF :let @+=expand("%:p")<CR>
+"
+"" filename (foo.txt)
+"nnoremap <leader>ct :let @+=expand("%:t")<CR>
+"
+"" directory name (/something/src)
+"nnoremap <leader>ch :let @+=expand("%:p:h")<CR>
 
 inoremap ;; <ESC>A;<ESC>
 
