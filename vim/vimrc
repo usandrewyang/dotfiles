@@ -69,6 +69,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'ojroques/vim-oscyank'
 
+Plugin 'tpope/vim-commentary'
+
 call vundle#end()            " required
 
 " Turn on syntax highlighting
@@ -283,6 +285,11 @@ nnoremap <leader>ct :let @0=expand("%:t") \| OSCYankRegister 0<CR>
 "" directory name (/something/src)
 nnoremap <leader>cp :let @0=expand("%:p:h") \| OSCYankRegister 0<CR>
 "------------------------------------------------------------
+
+" key maps for comment for line & block
+" plugin is required
+vmap <leader>/ gc
+nmap <leader>/ gcc
 
 inoremap ;; <ESC>A;<ESC>
 
