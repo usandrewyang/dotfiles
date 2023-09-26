@@ -1,0 +1,8 @@
+CompileFlags:                     # Tweak the parse settings
+  #Add: [-I/projects/ntsw-sw-ae/ayang/hsdk/include, -DINCLUDE_L3]
+  Remove: [-W*, -flarge-source-files]
+  Add: [-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include]
+  #Remove: -fno-aggressive-loop-optimizations
+Diagnostics:
+  ClangTidy:
+    Remove: [readability-misleading-indentation]
