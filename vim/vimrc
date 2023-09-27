@@ -65,12 +65,13 @@ Plugin 'morhetz/gruvbox'
 
 "Plugin 'sheerun/vim-polyglot'
 
-Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'ojroques/vim-oscyank'
 
 Plugin 'tpope/vim-commentary'
 
+Plugin 'junegunn/fzf'
 call vundle#end()            " required
 
 " Turn on syntax highlighting
@@ -269,6 +270,8 @@ nmap <leader>y <Plug>OSCYankOperator
 nmap <leader>yy <leader>y_
 vmap <leader>y <Plug>OSCYankVisual
 
+
+nmap <leader>f :FZF<CR>
 "------------------------------------------------------------
 " Yank file name or path to clipboard
 " register +/* does not work. Make use of reg 0 as a walk-around
@@ -293,11 +296,3 @@ nmap <leader>/ gcc
 
 inoremap ;; <ESC>A;<ESC>
 
-"
-" ctrlp configure
-"
-" Ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-" TODO cannot find some file in sdk, e.g.systems/linux/user/common/socdiag.c
-let g:ctrlp_max_files = 0
-let g:ctrlp_user_command = 'find %s -type f'
