@@ -93,9 +93,11 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-
 alias gh='cd /projects/ntsw-sw-ae/ayang'
+alias v='TERM=xterm vim'
+alias vv='TERM=screen nvim'
 
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -113,6 +115,17 @@ fi
 export PATH=/home/ay895922/.autojump/bin:/projects/ntsw-sw-ae/ayang/nodejs/node-v14.17.6-linux-x64/bin:/projects/csg_sonic3/rc893046/racks:/projects/csg_sonic3/rc893046/racks/pyrack_db:/home/ay895922/local/bin:/tools/bin:/usr/dt/bin:/usr/local/bin:/usr/bin:/bin/usr/sbin:/sbin:/tools/sparcworks/6.0/SUNWspro/bin:/usr/openwin/bin:/usr/ucb:/usr/ucb/bin:/projects/ntsw-sw/bin:/projects/ntsw-tools/bin:/bin:/usr/sbin:/usr/bin/X11:/projects/ntsw-tools/bin/:/projects/ntsw-sw/bin:/projects/ntsw-tools/bin/
 
 
+export CSCOPEVER=OS
+export CSCOPE_EDITOR=nvim
+export GITVER="2.27.0"
+
+export RACK_DB_PATH=/projects/csg_sonic3/rc893046/racks/pyrack_db
+
+# clangd v15
+# export PATH=/tools/oss/packages/x86_64-rhel7/llvm/15.0.7/bin/:$PATH
+# clangd v16
+export PATH=/tools/oss/packages/x86_64-rhel7/llvm/16.0.6/bin:$PATH
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -129,8 +142,9 @@ set -o vi
 # Turn off the bell of the command
 bind 'set bell-style none'
 
-alias v='TERM=xterm vim'
-alias vv='TERM=screen nvim'
 
 export EDITOR=vim
-. /usr/share/autojump/autojump.sh
+[[ -s /home/ay895922/.autojump/etc/profile.d/autojump.sh ]] && source /home/ay895922/.autojump/etc/profile.d/autojump.sh
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
