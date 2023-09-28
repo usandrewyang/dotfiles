@@ -72,6 +72,11 @@ Plugin 'ojroques/vim-oscyank'
 Plugin 'tpope/vim-commentary'
 
 Plugin 'junegunn/fzf'
+Plugin 'mhinz/vim-startify'
+Plugin 'ap/vim-buftabline'
+Plugin 'tpope/vim-vinegar'
+" Plugin 'justinmk/vim-dirvish'
+
 call vundle#end()            " required
 
 " Turn on syntax highlighting
