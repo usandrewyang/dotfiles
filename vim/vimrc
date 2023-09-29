@@ -20,6 +20,11 @@ set noswapfile
 set pastetoggle=<F3>
 
 set mouse=a
+
+set splitright
+"TODO
+"let g:netrw_altv=1
+
 "
 " Bootstrap for plugin manager
 " automatically install Vundle if vim-plug not found
@@ -73,6 +78,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mhinz/vim-startify'
 "Plugin 'ap/vim-buftabline'
 Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-surround'
 " Plugin 'justinmk/vim-dirvish'
 Plugin 'kshenoy/vim-signature'
 call vundle#end()            " required
