@@ -72,11 +72,13 @@ Plugin 'ojroques/vim-oscyank'
 Plugin 'tpope/vim-commentary'
 
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
 Plugin 'mhinz/vim-startify'
-Plugin 'ap/vim-buftabline'
+"Plugin 'ap/vim-buftabline'
 Plugin 'tpope/vim-vinegar'
 " Plugin 'justinmk/vim-dirvish'
-
+Plugin 'kshenoy/vim-signature'
 call vundle#end()            " required
 
 " Turn on syntax highlighting
@@ -153,9 +155,6 @@ set showmatch
 map <leader><space> :let @/=''<cr> " clear search
 
 " Textmate holdouts
-
-" Formatting
-map <leader>q gqip
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
@@ -276,7 +275,9 @@ nmap <leader>yy <leader>y_
 vmap <leader>y <Plug>OSCYankVisual
 
 
-nmap <leader>f :FZF<CR>
+nmap <leader>f :Files<CR>
+nmap <leader>b :Buffers<CR>
+
 "------------------------------------------------------------
 " Yank file name or path to clipboard
 " register +/* does not work. Make use of reg 0 as a walk-around
