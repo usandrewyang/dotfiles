@@ -238,7 +238,6 @@ if has("cscope")
     set cscopeverbose
 
     " set minimal key maps
-    "nmap <leader>cf :cs find f<space>
     nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
     nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
 
@@ -259,9 +258,9 @@ highlight CursorLine guibg=Black ctermbg=Black
 nnoremap <leader>ve :e $MYVIMRC<cr>
 nnoremap <leader>vs :source $MYVIMRC<cr>
 
-map <leader>x :bd <CR>
-map <F9> :bprev <CR>
-map <F10> :bnext <CR>
+map <leader>x :bd<CR>
+map <TAB> :bnext<CR>
+map <S-TAB> :bprev<CR>
 
 " map macro q to <leader>q
 noremap <leader>q q
@@ -303,6 +302,11 @@ vmap <leader>/ gc
 nmap <leader>/ gcc
 
 inoremap ;; <ESC>A;<ESC>
+
+nnoremap <S-j> :m .+1<CR>==
+nnoremap <S-k> :m .-2<CR>==
+vnoremap <S-j> :m '>+1<CR>gv=gv
+vnoremap <S-k> :m '<-2<CR>gv=gv
 
 let g:startify_session_persistence = 1
 let g:startify_change_to_dir = 0
