@@ -291,10 +291,10 @@ nmap <leader>/ gcc
 
 inoremap ;; <ESC>A;<ESC>
 
-nnoremap <S-j> :m .+1<CR>==
-nnoremap <S-k> :m .-2<CR>==
-vnoremap <S-j> :m '>+1<CR>gv=gv
-vnoremap <S-k> :m '<-2<CR>gv=gv
+nnoremap <S-Up> :m .-2<CR>==
+nnoremap <S-Down> :m .+1<CR>==
+vnoremap <S-Up> :m '<-2<CR>gv=gv
+vnoremap <S-Down> :m '>+1<CR>gv=gv
 
 nnoremap <F5> :UndotreeToggle<CR>
 
