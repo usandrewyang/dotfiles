@@ -77,7 +77,7 @@ Plugin 'junegunn/fzf.vim'
 
 Plugin 'mhinz/vim-startify'
 "Plugin 'ap/vim-buftabline'
-Plugin 'tpope/vim-vinegar'
+"Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-surround'
 " Plugin 'justinmk/vim-dirvish'
 Plugin 'kshenoy/vim-signature'
