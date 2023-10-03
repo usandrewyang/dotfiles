@@ -48,38 +48,24 @@ endif
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call vundle#begin() 
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 
 " colorscheme
 Plugin 'ghifarit53/tokyonight-vim'
 Plugin 'morhetz/gruvbox'
 
-"Plugin 'sheerun/vim-polyglot'
-
-"Plugin 'ctrlpvim/ctrlp.vim'
-
 Plugin 'ojroques/vim-oscyank'
-
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
 
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
 Plugin 'mhinz/vim-startify'
-"Plugin 'ap/vim-buftabline'
-"Plugin 'tpope/vim-vinegar'
-Plugin 'tpope/vim-surround'
-" Plugin 'justinmk/vim-dirvish'
 Plugin 'kshenoy/vim-signature'
 Plugin 'mbbill/undotree'
 call vundle#end()            " required
