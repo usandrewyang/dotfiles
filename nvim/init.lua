@@ -1,4 +1,4 @@
-require "user.impatient"
+-- require "user.impatient"
 require "user.options"
 require "user.keymaps"
 require "user.plugins_lazy"
@@ -18,8 +18,8 @@ require "user.lualine"
 require "user.illuminate"
 require "user.indentline"
 require "user.alpha"
-
 -- Note: Lsp conflicts with cscope
+
 require "user.lsp"
 -- require "user.dap"
 require "user.cscope"
