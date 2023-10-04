@@ -22,6 +22,9 @@ set pastetoggle=<F3>
 set mouse=a
 
 set splitright
+
+set guifont=DroidSansM\ Nerd\ Font:h18
+
 "TODO
 "let g:netrw_altv=1
 
