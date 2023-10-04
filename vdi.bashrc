@@ -144,7 +144,10 @@ bind 'set bell-style none'
 
 
 export EDITOR=vim
-[[ -s /home/ay895922/.autojump/etc/profile.d/autojump.sh ]] && source /home/ay895922/.autojump/etc/profile.d/autojump.sh
-
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# quick jump to dir, the speed is much quicker than autojump
+export PATH=/home/ay895922/.local/bin:$PATH
+eval "$(zoxide init bash)"
+
