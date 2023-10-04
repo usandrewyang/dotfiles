@@ -12,21 +12,12 @@
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
-" Don't try to be vi compatible
 set nocompatible
-
 set noswapfile
-
 set pastetoggle=<F3>
-
 set mouse=a
-
 set splitright
-
 set guifont=DroidSansM\ Nerd\ Font:h18
-
-"TODO
-"let g:netrw_altv=1
 
 "
 " Bootstrap for plugin manager
@@ -42,7 +33,6 @@ endif
 " set the runtime path to include Vundle and initialize
 "
 " TODO: Vundle won't bootstrap itself. It is required to download it first
-"
 "
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "
