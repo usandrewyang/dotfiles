@@ -150,3 +150,4 @@ export PATH=/home/ay895922/.local/bin:$PATH
 eval "$(zoxide init bash)"
 export FZF_CTRL_T_COMMAND="zoxide query --list"
 
+export PATH=/tools/oss/packages/x86_64-centos7/tmux/3.3a/bin:$PATH
