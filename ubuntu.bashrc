@@ -117,8 +117,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# set readline editting mode as vi
-set -o vi
 # Turn off the bell of the command
 bind 'set bell-style none'
 
@@ -126,6 +124,10 @@ alias v='TERM=xterm vim'
 alias vv='TERM=screen nvim'
 
 export EDITOR=vim
-. /usr/share/autojump/autojump.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# quick jump to dir, the speed is much quicker than autojump
+export PATH=~/.local/bin:$PATH
+eval "$(zoxide init bash)"
+export FZF_CTRL_T_COMMAND="zoxide query --list"
