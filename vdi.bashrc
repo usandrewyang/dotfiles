@@ -137,8 +137,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# set readline editting mode as vi
-set -o vi
 # Turn off the bell of the command
 bind 'set bell-style none'
 
@@ -150,4 +148,5 @@ export EDITOR=vim
 # quick jump to dir, the speed is much quicker than autojump
 export PATH=/home/ay895922/.local/bin:$PATH
 eval "$(zoxide init bash)"
+export FZF_CTRL_T_COMMAND="zoxide query --list"
 
