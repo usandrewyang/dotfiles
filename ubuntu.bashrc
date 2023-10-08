@@ -125,7 +125,8 @@ alias vv='TERM=screen nvim'
 
 export EDITOR=vim
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Check `apt show fzf` to enable bash key bindings
+source /usr/share/doc/fzf/examples/key-bindings.bash
 
 # quick jump to dir, the speed is much quicker than autojump
 export PATH=~/.local/bin:$PATH
