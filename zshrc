@@ -117,6 +117,7 @@ alias ll='ls -lhrt'     #extra info compared to "l"
 alias lld='ls -lUd */'  #list directories
 alias la='ls -a'        #list hidden files
 
+alias v='vim'
 alias vv='nvim'
 alias ss="ssh ay895922@lvnvde5875.lvn.broadcom.net"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
