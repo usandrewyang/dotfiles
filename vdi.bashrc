@@ -116,7 +116,7 @@ export PATH=/home/ay895922/.autojump/bin:/projects/ntsw-sw-ae/ayang/nodejs/node-
 
 
 export CSCOPEVER=OS
-export CSCOPE_EDITOR=nvim
+export CSCOPE_EDITOR=vim
 export GITVER="2.27.0"
 
 export RACK_DB_PATH=/projects/csg_sonic3/rc893046/racks/pyrack_db

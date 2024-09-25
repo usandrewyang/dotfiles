@@ -294,6 +294,24 @@ vnoremap <S-Down> :m '>+1<CR>gv=gv
 
 nnoremap <F5> :UndotreeToggle<CR>
 
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen 20
+    else
+        cclose
+    endif
+endfunction
+nnoremap <silent> <F2> :call ToggleQuickFix()<cr>
+
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen 20
+    else
+        cclose
+    endif
+endfunction
+nnoremap <silent> <F2> :call ToggleQuickFix()<cr>
+
 let g:startify_session_persistence = 1
 let g:startify_change_to_dir = 0
 
