@@ -223,6 +223,8 @@ if has("cscope")
     " set minimal key maps
     nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
     nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <leader>cc :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <leader>ct :cs find t <C-R>=expand("<cword>")<CR><CR>
 
 endif
 

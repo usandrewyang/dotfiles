@@ -112,11 +112,15 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-export PATH=/home/ay895922/.autojump/bin:/projects/ntsw-sw-ae/ayang/nodejs/node-v14.17.6-linux-x64/bin:/projects/csg_sonic3/rc893046/racks:/projects/csg_sonic3/rc893046/racks/pyrack_db:/home/ay895922/local/bin:/tools/bin:/usr/dt/bin:/usr/local/bin:/usr/bin:/bin/usr/sbin:/sbin:/tools/sparcworks/6.0/SUNWspro/bin:/usr/openwin/bin:/usr/ucb:/usr/ucb/bin:/projects/ntsw-sw/bin:/projects/ntsw-tools/bin:/bin:/usr/sbin:/usr/bin/X11:/projects/ntsw-tools/bin/:/projects/ntsw-sw/bin:/projects/ntsw-tools/bin/
+export PATH=/home/ay895922/.autojump/bin:/projects/ntsw-sw-ae/ayang/nodejs/node-v14.17.6-linux-x64/bin:/projects/csg_sonic3/rc893046/racks:/projects/csg_sonic3/rc893046/racks/pyrack_db:/home/ay895922/local/bin:/usr/bin:/tools/bin:/usr/dt/bin:/usr/local/bin:/usr/bin:/bin/usr/sbin:/sbin:/tools/sparcworks/6.0/SUNWspro/bin:/usr/openwin/bin:/usr/ucb:/usr/ucb/bin:/projects/ntsw-sw/bin:/projects/ntsw-tools/bin:/bin:/usr/sbin:/usr/bin/X11:/projects/ntsw-tools/bin/:/projects/ntsw-sw/bin:/projects/ntsw-tools/bin/
 
+# Fix python3 version. Set default version to 3.8.0 which is required by
+# compiling hsdk.
+export PATH=/home/ay895922/local/bin:$PATH
 
-export CSCOPEVER=OS
+#export CSCOPEVER=OS # deprecated in Rocky8.1
 export CSCOPE_EDITOR=vim
+
 export GITVER="2.27.0"
 
 export RACK_DB_PATH=/projects/csg_sonic3/rc893046/racks/pyrack_db
@@ -150,4 +154,6 @@ export PATH=/home/ay895922/.local/bin:$PATH
 eval "$(zoxide init bash)"
 export FZF_CTRL_T_COMMAND="zoxide query --list"
 
-export PATH=/tools/oss/packages/x86_64-centos7/tmux/3.3a/bin:$PATH
+#export PATH=/tools/oss/packages/x86_64-centos7/tmux/3.3a/bin:$PATH
+export PATH=/tools/oss/packages/x86_64-rocky8/tmux/3.3a/bin:$PATH
+#export PATH=/projects/ntsw-sw-ae/ayang/src/cscope-15.9/src:$PATH
