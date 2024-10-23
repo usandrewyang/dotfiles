@@ -1,9 +1,17 @@
-# This is Git's per-user configuration file.
 [user]
-	email = usandrewyang@gmail.com
-	name = andrew
+	name = Andrew Yang
+	email = andrew.yang@broadcom.com
+[core]
+	editor = vim
+	compression = 0
+[pull]
+	rebase = true
 [log]
     date = short
 [format]
 # TODO HEAD info is missing for the following format
     pretty = format:%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s
+[push]
+	default = simple
+[alias]
+  ls-tags = !git log -a --pretty=oneline --graph
