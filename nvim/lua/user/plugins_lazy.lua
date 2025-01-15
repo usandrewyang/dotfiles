@@ -79,7 +79,7 @@ lazy.setup({
     },
 
     -- Treesitter
-    { "nvim-treesitter/nvim-treesitter", tag = "v0.9.0" },
+    { "nvim-treesitter/nvim-treesitter", tag = "v0.9.1" },
 
     -- Git
     { "lewis6991/gitsigns.nvim", tag = "v0.6" },
@@ -126,6 +126,28 @@ lazy.setup({
             "SmiteshP/nvim-navic",
             "nvim-tree/nvim-web-devicons", -- optional dependency
         },
+    },
+
+    {
+        "nvim-neorg/neorg",
+        build = ":Neorg sync-parsers",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function()
+          require("neorg").setup {
+            load = {
+              ["core.defaults"] = {}, -- Loads default behaviour
+              ["core.concealer"] = {}, -- Adds pretty icons to your documents
+              ["core.dirman"] = { -- Manages Neorg workspaces
+                config = {
+                  workspaces = {
+                    work = "~/notes/work",
+                    home = "~/notes/home",
+                  },
+                },
+              },
+            },
+          }
+        end,
     },
 })
 
