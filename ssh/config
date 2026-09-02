@@ -1,0 +1,25 @@
+Host vdi
+  HostName lvnvda7148.lvn.broadcom.net
+  User ay895922
+
+Host dsh
+    HostName 149.28.209.60
+    Port 443
+    User andrew
+    LocalForward 7391 127.0.0.1:7391
+    ExitOnForwardFailure yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+
+Host rdp
+    HostName 149.28.209.60
+    Port 443
+    User andrew
+    LocalForward 3389 127.0.0.1:3389
+    ExitOnForwardFailure yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+
+Host *
+  ServerAliveInterval 60
+  ServerAliveCountMax 3
